@@ -16,4 +16,8 @@ def process_weather_data(location, weather):
     return data
 def print_weather(weather_result):
     print(f"search_time: {weather_result["search_time"]}\ncity: {weather_result["city"]}\nstate: {weather_result["state"]}\ncountry: {weather_result["country"]}\ntemperature: {weather_result["temperature"]}\nfeels_like: {weather_result["feels_like"]}\ncondition: {weather_result["condition"]}\nhumidity: {weather_result["humidity"]}\nwind_speed: {weather_result["wind_speed"]}")
-
+def get_fieldnames(data):
+    fieldnames = []
+    for i in data:
+        fieldnames.append(i)
+    return fieldnames    
