@@ -7,7 +7,14 @@ from name_city import *
 from country_code import *
 from key import *
 def get_location(city, country, state=""):     
-    r = requests.get(f"http://api.openweathermap.org/geo/1.0/direct?q={city},{state},{country}&appid={get_key()}")
+    try:
+        r = requests.get(f"http://api.openweathermap.org/geo/1.0/direct?q={city},{state},{country}&appid={get_key()}")
+    except requests.ConnectionError:
+        print("Connection not fond !")
+        return None
+    except requests.RequestException:
+        print("A connection failed ! ") 
+        return None   
     try:
         r.raise_for_status()
     except requests.HTTPError:
