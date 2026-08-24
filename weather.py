@@ -8,6 +8,3 @@ def get_key():
     load_dotenv()
     SECRET_KEY = os.getenv('API_key')
     return SECRET_KEY
-
-
-    
