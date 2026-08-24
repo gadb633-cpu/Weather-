@@ -15,4 +15,4 @@ def get_location(city, country, state=""):
     r = requests.get(f"http://api.openweathermap.org/geo/1.0/direct?q={city},{state},{country}&limit={limit}&appid={get_key()}")
     req = r.json()
     location = [req[0]["lat"],req[0]["lon"]]
-    return location 
+    return location   
