@@ -1,6 +1,9 @@
 def name_city():
-    city = input("enter name city: ")
-    if city == "":
-        print(" the city cannot be empty ! ")
-        return False
-    return city
+    status = True
+    while status:
+        city = input("enter name city: ")
+        if city == "":
+            print(" the city cannot be empty ! ")
+            continue
+        status =False
+        return city
