@@ -4,3 +4,5 @@ import os
 import json
 from datetime import datetime, timedelta
 import csv
+def get_key():
+    pass
