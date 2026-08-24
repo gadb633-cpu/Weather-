@@ -6,4 +6,4 @@ def name_city():
             print(" the city cannot be empty ! ")
             continue
         status =False
-        return city
+        return city   
